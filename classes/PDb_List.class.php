@@ -645,6 +645,7 @@ class PDb_List extends PDb_Shortcode {
    */
   public function search_submit_buttons() {
   	$output = array();
+	$output[] = '<form  onsubmit="return false"></form>';
   	$output[] = '<input name="submit_button" class="search-form-submit" data-submit="search" type="submit" value="' . esc_attr($this->i18n['search']) . '">';
     $output[] = '<input name="submit_button" class="search-form-clear" data-submit="clear" type="submit" value="' . esc_attr($this->i18n['clear']) . '">';
     return $this->output_HTML($output);
